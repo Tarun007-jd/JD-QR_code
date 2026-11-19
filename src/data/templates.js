@@ -1,0 +1,235 @@
+import {
+  Briefcase,
+  CalendarDays,
+  IndianRupee,
+  LayoutGrid,
+  Megaphone,
+  Palette,
+  Share2,
+  UserRound,
+  UtensilsCrossed,
+} from 'lucide-react'
+
+export const TEMPLATE_CATEGORIES = [
+  { id: 'all', label: 'All templates', icon: LayoutGrid },
+  { id: 'business', label: 'Business', icon: Briefcase },
+  { id: 'restaurant', label: 'Restaurant', icon: UtensilsCrossed },
+  { id: 'event', label: 'Event', icon: CalendarDays },
+  { id: 'social', label: 'Social Media', icon: Share2 },
+  { id: 'portfolio', label: 'Portfolio', icon: Palette },
+  { id: 'personal', label: 'Personal', icon: UserRound },
+  { id: 'marketing', label: 'Marketing', icon: Megaphone },
+  { id: 'payment', label: 'Payment', icon: IndianRupee },
+]
+
+export const QR_TEMPLATES = [
+  {
+    id: 'founder-card',
+    name: 'Founder card',
+    description: 'A polished digital business card with everything a new contact needs.',
+    category: 'business',
+    type: 'vcard',
+    featured: true,
+    fields: {
+      name: 'Aarav Mehta',
+      organization: 'Northstar Design',
+      jobTitle: 'Founder & Design Director',
+      phone: '+91 98765 43210',
+      email: 'aarav@example.com',
+      website: 'https://example.com',
+    },
+    customization: { fgColor: '#312E81', bgColor: '#EEF2FF' },
+  },
+  {
+    id: 'product-launch',
+    name: 'Product launch',
+    description: 'Route print and packaging straight to a launch page.',
+    category: 'business',
+    type: 'url',
+    featured: true,
+    fields: { url: 'https://example.com/northstar/launch' },
+    customization: { fgColor: '#0F172A', bgColor: '#FFFFFF' },
+  },
+  {
+    id: 'restaurant-menu',
+    name: 'Restaurant menu',
+    description: 'A table-ready menu link for a contactless ordering experience.',
+    category: 'restaurant',
+    type: 'url',
+    featured: true,
+    fields: { url: 'https://example.com/cafe-vesper/menu' },
+    customization: { fgColor: '#7C2D12', bgColor: '#FFF7ED' },
+  },
+  {
+    id: 'guest-wifi',
+    name: 'Guest Wi-Fi',
+    description: 'Help guests connect instantly without sharing a password out loud.',
+    category: 'restaurant',
+    type: 'wifi',
+    fields: {
+      ssid: 'Cafe Vesper Guests',
+      password: 'welcome2026',
+      security: 'WPA',
+      hidden: false,
+    },
+    customization: { fgColor: '#0C4A6E', bgColor: '#F0F9FF' },
+  },
+  {
+    id: 'event-checkin',
+    name: 'Event check-in',
+    description: 'A simple check-in link for reception desks and welcome signs.',
+    category: 'event',
+    type: 'url',
+    fields: { url: 'https://example.com/summit/check-in' },
+    customization: { fgColor: '#4C1D95', bgColor: '#FAF5FF' },
+  },
+  {
+    id: 'save-the-date',
+    name: 'Save the date',
+    description: 'Share event details in a format that works at any size.',
+    category: 'event',
+    type: 'text',
+    fields: {
+      text: 'Design Systems Summit\n18–19 March 2027\nThe Atrium, Bengaluru\nDoors open at 9:30 AM',
+    },
+    customization: { fgColor: '#78350F', bgColor: '#FFFBEB' },
+  },
+  {
+    id: 'instagram-profile',
+    name: 'Instagram profile',
+    description: 'Turn a shelf, receipt, or flyer into a route to your latest work.',
+    category: 'social',
+    type: 'url',
+    fields: { url: 'https://example.com/studio/social' },
+    customization: { fgColor: '#831843', bgColor: '#FFF1F2' },
+  },
+  {
+    id: 'whatsapp-channel',
+    name: 'WhatsApp chat',
+    description: 'Let customers start a conversation with your team right away.',
+    category: 'social',
+    type: 'whatsapp',
+    fields: {
+      countryCode: '91',
+      phone: '98765 43210',
+      message: 'Hi! I found you through QR Studio.',
+    },
+    customization: { fgColor: '#064E3B', bgColor: '#ECFDF5' },
+  },
+  {
+    id: 'design-portfolio',
+    name: 'Design portfolio',
+    description: 'A refined link to your latest selected work.',
+    category: 'portfolio',
+    type: 'url',
+    fields: { url: 'https://example.com/portfolio' },
+    customization: { fgColor: '#1E293B', bgColor: '#F8FAFC' },
+  },
+  {
+    id: 'freelance-card',
+    name: 'Freelance card',
+    description: 'A minimal contact card for networking events and studios.',
+    category: 'portfolio',
+    type: 'vcard',
+    fields: {
+      name: 'Maya Chen',
+      organization: 'Maya Chen Studio',
+      jobTitle: 'Brand & Digital Designer',
+      phone: '+1 415 555 0138',
+      email: 'maya@example.com',
+      website: 'https://example.com/maya',
+    },
+    customization: { fgColor: '#164E63', bgColor: '#ECFEFF' },
+  },
+  {
+    id: 'personal-contact',
+    name: 'Personal contact',
+    description: 'Your essential contact details, always ready to share.',
+    category: 'personal',
+    type: 'vcard',
+    fields: {
+      name: 'Rohan Kapoor',
+      organization: '',
+      jobTitle: '',
+      phone: '+91 90000 12345',
+      email: 'rohan@example.com',
+    },
+    customization: { fgColor: '#1E1B4B', bgColor: '#F5F3FF' },
+  },
+  {
+    id: 'home-wifi',
+    name: 'Home guest Wi-Fi',
+    description: 'A thoughtful little welcome for friends and visitors.',
+    category: 'personal',
+    type: 'wifi',
+    fields: {
+      ssid: 'Rohan’s Wi-Fi',
+      password: 'stayawhile',
+      security: 'WPA',
+      hidden: false,
+    },
+    customization: { fgColor: '#3B0764', bgColor: '#FAF5FF' },
+  },
+  {
+    id: 'campaign-landing',
+    name: 'Campaign landing',
+    description: 'Connect a poster or mailer to a focused campaign page.',
+    category: 'marketing',
+    type: 'url',
+    fields: { url: 'https://example.com/campaign/spring' },
+    customization: { fgColor: '#7F1D1D', bgColor: '#FFF1F2' },
+  },
+  {
+    id: 'newsletter-signup',
+    name: 'Newsletter signup',
+    description: 'Open a pre-written email that makes subscribing effortless.',
+    category: 'marketing',
+    type: 'email',
+    fields: {
+      email: 'studio@example.com',
+      subject: 'Newsletter signup',
+      body: 'Hi team, please add me to your newsletter.',
+    },
+    customization: { fgColor: '#312E81', bgColor: '#EEF2FF' },
+  },
+  {
+    id: 'upi-checkout',
+    name: 'Counter checkout',
+    description: 'A clean, scan-to-pay QR for a studio desk or store counter.',
+    category: 'payment',
+    type: 'upi',
+    fields: {
+      upiId: 'qrstudio@okhdfcbank',
+      payeeName: 'QR Studio',
+      amount: '',
+      note: 'Studio order',
+    },
+    customization: { fgColor: '#064E3B', bgColor: '#ECFDF5' },
+  },
+  {
+    id: 'tip-jar',
+    name: 'Tip jar',
+    description: 'A frictionless way for happy customers to leave a tip.',
+    category: 'payment',
+    type: 'upi',
+    fields: {
+      upiId: 'qrstudio@okhdfcbank',
+      payeeName: 'QR Studio',
+      amount: '',
+      note: 'Thanks for the coffee',
+    },
+    customization: { fgColor: '#7C2D12', bgColor: '#FFF7ED' },
+  },
+]
+
+export function getTemplateById(templateId) {
+  if (!templateId) return null
+  return QR_TEMPLATES.find((template) => template.id === templateId) ?? null
+}
+
+export function getTemplateCategory(categoryId) {
+  return (
+    TEMPLATE_CATEGORIES.find((category) => category.id === categoryId) ??
+    TEMPLATE_CATEGORIES[0]
+  )
+}

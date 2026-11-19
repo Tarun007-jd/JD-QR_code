@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="QR Studio — a beautifully simple workspace for creating, customizing, and managing QR codes. Local-first and privacy friendly."
+    />
+    <meta name="theme-color" content="#F8FAFC" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>QR Studio — Create beautiful QR codes</title>
+    <script>
+      // Apply the saved appearance before React mounts to avoid a flash.
+      try {
+        var saved = JSON.parse(localStorage.getItem('qrstudio:settings:v1') || '{}')
+        var preference = saved.theme || 'light'
+        var resolved =
+          preference === 'system'
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light'
+            : preference
+        document.documentElement.dataset.theme = resolved === 'dark' ? 'dark' : 'light'
+        document.documentElement.style.colorScheme = resolved === 'dark' ? 'dark' : 'light'
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
